@@ -42,7 +42,7 @@ int main() {
     double (*func[COUNTFUNC])(double,double) = {NULL,sum, diff,divi,mult, powXY, root,NULL,NULL};
     int i = 1;
     char F[BUFFMAX];
-    printf("Простой калькулятор на 4 функции (+-/*)\n Максимальная длинна чисел 10 (учитывая точку)\n");
+    printf("-Калькулятор-\n Максимальная длинна чисел 10 (учитывая точку)\n");
     printf("Введите первое число (x)\n");
     fgets(buf,MAX,stdin);
     x = atof(buf);
