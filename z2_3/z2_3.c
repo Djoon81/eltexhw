@@ -29,12 +29,17 @@ double powXY(double x,double y){
     o = pow(x,y);
     return o;
 }
+double root(double x,double y){
+    double o;
+    o = pow(x,1/y);
+    return o;
+}
 int main() {
     double x;
     double y;
     double o;
     char buf[MAX];
-    double (*func[COUNTFUNC])(double,double) = {NULL,sum, diff,divi,mult, powXY, NULL,NULL,NULL};
+    double (*func[COUNTFUNC])(double,double) = {NULL,sum, diff,divi,mult, powXY, root,NULL,NULL};
     int i = 1;
     char F[BUFFMAX];
     printf("Простой калькулятор на 4 функции (+-/*)\n Максимальная длинна чисел 10 (учитывая точку)\n");
@@ -49,7 +54,7 @@ int main() {
     while (i != 0){
         printf("Введите номер действия, которое нужно совершить над этими числами\n"
                " 1 - '+'\n 2 - '-'\n 3 - '/'\n 4 - '*'\n"
-               " 5 - 'x в степени y'\n"
+               " 5 - 'x в степени y'\n 6 - 'корень y степени из x'"
                "Если хотите закончить работу - введите 0\n");
         fgets(F,BUFFMAX,stdin);
         i = atoi(F);
