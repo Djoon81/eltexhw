@@ -1,6 +1,6 @@
 CC = gcc
 CFLAGS = -fopenmp
-TARGET = z23
+TARGET = z22
 all: $(TARGET)
 $(TARGET): z2_2.c
 	$(CC) $(CFLAGS) -o $@ $^
